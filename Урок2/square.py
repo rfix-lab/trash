@@ -19,31 +19,31 @@ test_a=True
 test_b=True
 test_c=True
 while test_a==True:
-    a = input ("Input a: ")
-    test_a=is_digit(a)
+    a = int(input ("Input a: "))
+    test_a=is_digit(str(a))
     continue
 while test_b==True:
-    b = input ("Input b: ")
-    test_b=is_digit(b)
+    b = int(input ("Input b: "))
+    test_b=is_digit(str(b))
     continue
 while test_c==True:
-    c = input ("Input c: ")
-    test_c=is_digit(c)
+    c = int(input ("Input c: "))
+    test_c=is_digit(str(c))
     continue
-if int(a) != 0:
-    D = int(b)**2 - 4*int(a)*int(c)
+if a != 0:
+    D = b**2 - 4*a*c
     if D >=0:
-        x1 = (-(int(b)) + math.sqrt(D))/2*a
-        x2 = (-(int(b)) - math.sqrt(D))/2*a
+        x1 = -b + math.sqrt(D)/(2*a)
+        x2 = -b - math.sqrt(D)/(2*a)
         print (x1,x2)
     else:
-        print("there is no solutions")
+        print("there is no solutions!")
 else:
-    if int(b)!=0:
-        x=-(int(c)/int(b))
+    if b!=0:
+        x=-c/b
         print("x={}".format(x))
     else:
-        if int(c)!=0:
+        if c!=0:
             print("there is no solutions")
         else:
             print("Верно для любого х")
