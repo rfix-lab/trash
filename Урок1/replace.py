@@ -10,6 +10,6 @@ for file in fileList:
                     if "Temperature=" in part:
                         dig=int(re.search(r'\d+', part).group(0))
                         my_dig=int(dig)-400
-                        k.write('crs:Temperature="'+str(my_dig)+'"')
+                        k.write('crs:Temperature="'+str(my_dig)+'"'+'\n')
                     else:
                         k.write(part)
