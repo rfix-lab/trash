@@ -1,3 +1,4 @@
+from typing import Text
 import requests
 from bs4 import BeautifulSoup
 
@@ -10,7 +11,5 @@ tags = soup.find_all('div', class_='tags')
 
 #for i in range (0,len(quotes)):
  #   print (authors[i].text)
-#for i in authors:
- #   print (i.text)
-for i in tags:
+for i in authors:
     print (i.text)
